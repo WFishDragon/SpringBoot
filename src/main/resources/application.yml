@@ -7,3 +7,15 @@ url:
 spring:
   thymeleaf:
     cache: false #关闭缓存
+logging:
+  config: logback.xml
+  level:
+    com.wyl.dao: trace
+
+mybatis:
+  # 指定别名设置的包为所有entity
+  type-aliases-package: com.itcodai.course10.entity
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰命名规范
+  mapper-locations: # mapper映射文件位置
+    - classpath:mapper/*.xml

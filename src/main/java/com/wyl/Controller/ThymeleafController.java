@@ -25,7 +25,6 @@ public class ThymeleafController {
     }
     @GetMapping("/getBlogger")
     public String getBlogger(Model model) {
-        System.out.println("运行成功");
         Blogger blogger = new Blogger(1L, "测试", "123456");
         model.addAttribute("blogger", blogger);
         return "blogger";
